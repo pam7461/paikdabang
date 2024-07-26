@@ -109,7 +109,7 @@
             text-indent:-99999px;
         }
         .nav{
-            /* display:none; */
+            display:none;
             position:absolute;
             left:0;
             right:0;
@@ -124,7 +124,8 @@
         }
         .main-nav>li{
             grid-column:1/-1;
-            
+            border-bottom:1px solid var(--gray-color11);
+            padding:20px 18px;
         }
         .sub-nav{
             display:none;
@@ -204,6 +205,9 @@
             }
             .main-nav>li{
                 grid-column:auto/auto;
+                border-bottom:none;
+                padding:50px 0 0 0;
+                font-size:0.85em;
             }
             .q-nav{
                 display:block;
