@@ -71,6 +71,28 @@
         }
 
         /* .header */
+        .header{
+           padding:20px 0; 
+           background:var(--gray-color15);
+        }
+        .header .container{
+            max-width:1170px;
+            margin:0 auto;
+            display:grid;
+            grid-template-columns:auto auto;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+
+        .nav{
+            display:none;
+        }
+        .q-nav{
+            display:none;
+        }
+
+
         /* .main-banner */
         .main-banner .container{
             padding:0;
@@ -120,14 +142,91 @@
 
 
         @media (min-width:1020px){
-
+            .logo{
+                grid-area:2/1/3/2;
+            }
+            .btn-nav{
+                display:none;
+            }
+            .nav{
+                display:block;
+                grid-area:2/2/3/-1;
+            }
+            .q-nav{
+                display:block;
+                grid-area:1/2/2/-1;
+            }
         }
     </style>
 </head>
 <body>
     <section class="wrap">
         <header class="header">
-            <div class="container"></div>
+            <div class="container">
+                <h1 class="logo"><a href="./index.html">빽다방</a></h1>
+                <div class="btn-nav"><span>네비버튼</span><span></span><span></span></div>
+                <nav class="nav">
+                    <ul class="main-nav">
+                        <li>
+                            <span>빽다방</span>
+                            <ul class="sub-nav">
+                                <li><a href="#">CEO 인사말</a></li>
+                                <li><a href="#">빽다방 소개</a></li>
+                                <li><a href="#">멤버십 / 앱 소개</a></li>
+                                <li><a href="#">커피 이야기</a></li>
+                                <li><a href="#">교육 이야기</a></li>                                
+                            </ul>
+                        </li>
+                        <li>
+                            <span>메뉴</span>
+                            <ul class="sub-nav">
+                                <li><a href="#">신메뉴</a></li>
+                                <li><a href="#">커피</a></li>
+                                <li><a href="#">음료</a></li>
+                                <li><a href="#">아이스크림/디저트</a></li>
+                                <li><a href="#">빽스치노</a></li>                                
+                            </ul>
+                        </li>
+                        <li>
+                            <span>소식</span>
+                            <ul class="sub-nav">
+                                <li><a href="#">소식</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">친절 우수매장</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>커뮤니티</span>
+                            <ul class="sub-nav">
+                                <li><a href="#">커피 클래스</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>매장안내</span>
+                            <ul class="sub-nav">
+                                <li><a href="#">매장찾기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>창업안내</span>
+                            <ul class="sub-nav">
+                                <li><a href="#">왜 빽다방인가요?</a></li>
+                                <li><a href="#">창업상담 신청</a></li>
+                                <li><a href="#">창업절차 및 조건</a></li>
+                                <li><a href="#">인테리어</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>고객의 소리</span>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="q-nav">
+                    <span><a href="#">더본코리아</a></span>
+                    <span><a href="#"><img src="./images/ico-face.png" alt="facebook"></a></span>
+                    <span><a href="#"><img src="./images/ico-insta.png" alt="instagram"></a></span>
+                </div>
+            </div>
         </header>
         <section class="sec sec01 main-banner">
             <div class="container"></div>
