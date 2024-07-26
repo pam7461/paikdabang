@@ -7,20 +7,9 @@
     <link rel="stylesheet" href="./css/reset.css">
     <title>빽다방</title>
     <style>
-        .container{
-            height:300px;
-        }
-        .header{background:#000;}
-        .main-banner{background:#f00;}
-        .coffee-story{background:#ff0;}
-        .brand-story{background:#0f0;}
-        .fresh-coffee{background:#0ff;}
-        .various-coffee{background:#00f;}
-        .sweet-ccino{background:#f0f;}
-        .dessert{background:lightcoral;}
-        .fran-store{background:var(--gray-color06);}
-        .sns{background:darkgreen;}
-        .footer{background:darkmagenta;}
+        
+        
+        
         /* 모바일우선 */
         @font-face {
             font-family:'Montserrat';
@@ -71,7 +60,31 @@
         }
         .wrap{
             overflow:hidden;
+            display:grid;
+            grid-template-columns:repeat(12,1fr);
         }
+        .header,.sec,.footer{
+            grid-column:1/-1;
+        }
+        .container{
+            padding:0 10px;
+        }
+
+        /* .header */
+        /* .main-banner */
+        .main-banner .container{
+            padding:0;
+        }
+        /* .coffee-story */
+        /* .brand-story */
+        /* .fresh-coffee */
+        /* .various-coffee */
+        /* .sweet-ccino */
+        /* .dessert */
+        /* .fran-store */
+        /* .sns */
+        /* .footer */
+
 
 
 
@@ -83,7 +96,24 @@
 
 
         @media (min-width:1020px){
-
+            .coffee-story{
+                grid-area:3/1/4/7;
+            }
+            .brand-story{
+                grid-area:3/7/4/-1;
+            }
+            .various-coffee{
+                grid-area:5/1/6/8;
+            }
+            .sweet-ccino{
+                grid-area:5/8/6/-1;
+            }
+            .dessert{
+                grid-area:6/6/7/-1;
+            }
+            .fran-store{
+                grid-area:6/1/7/6;
+            }
         }
 
 
