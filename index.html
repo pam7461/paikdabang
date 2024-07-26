@@ -6,11 +6,7 @@
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/reset.css">
     <title>빽다방</title>
-    <style>
-        .main-banner{
-            height:10000px;
-        }
-        
+    <style>       
         
         /* 모바일우선 */
         @font-face {
@@ -77,6 +73,7 @@
            padding:20px 0; 
            background:var(--gray-color15);
            position:relative;
+           z-index:100;
         }        
         .header .container{
             max-width:1170px;
@@ -176,11 +173,27 @@
 
 
         /* .main-banner */
+        .main-banner{
+            z-index:90;
+        }
         .main-banner .container{
             padding:0;
         }
         .main-banner h2{
             display:none;
+        }
+        .slider{
+            display:grid;
+        }
+        .slider div{
+            grid-area:1/1/2/-1;
+            z-index:1;
+            opacity:0;
+            transition:opacity 0.3s;
+        }
+        .slider div.active{
+            z-index:100;
+            opacity:1;
         }
         /* .coffee-story */
         /* .brand-story */
@@ -333,7 +346,7 @@
             <div class="container">
                 <h2>이벤트</h2>
                 <div class="slider">
-                    <div>
+                    <div class="active">
                         <a href="#">
                             <picture>
                                 <source media="(min-width:1020px)" srcset="./images/main-banner01.jpg">
