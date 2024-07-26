@@ -125,10 +125,20 @@
         .main-nav>li{
             grid-column:1/-1;
             border-bottom:1px solid var(--gray-color11);
+            /* padding:20px 18px; */
+        }
+        .main-nav>li>span{
+            display:block;
             padding:20px 18px;
         }
         .sub-nav{
-            display:none;
+            /* display:none; */
+            padding-left:10px;
+            background:var(--gray-color15);
+        }
+        .sub-nav li{
+            border-bottom:1px solid var(--gray-color13);
+            padding:1em 2em;
         }
         .q-nav{
             display:none;
@@ -244,8 +254,10 @@
             .main-nav>li{
                 grid-column:auto/auto;
                 border-bottom:none;
-                padding:50px 0 0 0;
                 font-size:0.85em;
+            }
+            .main-nav>li>span{
+                padding:50px 0 0 0;
             }
             .q-nav{
                 display:grid;
