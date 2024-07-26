@@ -125,20 +125,23 @@
         .main-nav>li{
             grid-column:1/-1;
             border-bottom:1px solid var(--gray-color11);
-            /* padding:20px 18px; */
+            cursor:pointer;
         }
         .main-nav>li>span{
             display:block;
             padding:20px 18px;
         }
         .sub-nav{
-            /* display:none; */
+            display:none;
             padding-left:10px;
             background:var(--gray-color15);
         }
         .sub-nav li{
             border-bottom:1px solid var(--gray-color13);
             padding:1em 2em;
+        }
+        .sub-nav li:last-child{
+            border-bottom:none;
         }
         .q-nav{
             display:none;
@@ -370,6 +373,11 @@
     <script>
         $('.btn-nav').click(function(){
             $('.nav').slideToggle();
+        })
+        $('.main-nav>li').click(function(){
+            // $('.sub-nav').slideToggle();
+            $('.main-nav>li').not(this).children('.sub-nav').slideUp();
+            $(this).children('.sub-nav').slideToggle();
         })
     </script>
 </body>
