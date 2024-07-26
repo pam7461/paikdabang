@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="./css/reset.css">
     <title>빽다방</title>
     <style>
+        .container{
+            height:300px;
+        }
+        .header{background:#000;}
+        .main-banner{background:#f00;}
+        .coffee-story{background:#ff0;}
+        .brand-story{background:#0f0;}
+        .fresh-coffee{background:#0ff;}
+        .various-coffee{background:#00f;}
+        .sweet-ccino{background:#f0f;}
+        .dessert{background:lightcoral;}
+        .fran-store{background:var(--gray-color06);}
+        .sns{background:darkgreen;}
+        .footer{background:darkmagenta;}
+        /* 모바일우선 */
         @font-face {
             font-family:'Montserrat';
             src: url(./fonts/Montserrat.ttf);
@@ -24,7 +39,6 @@
             0%{transform:scale(1);}
             100%{transform:scale(1.1);}
         }
-
 
 
         :root{
@@ -58,6 +72,26 @@
         .wrap{
             overflow:hidden;
         }
+
+
+
+
+        @media (min-width:760px){
+
+        }
+
+
+
+        @media (min-width:1020px){
+
+        }
+
+
+
+
+        @media (min-width:1020px){
+
+        }
     </style>
 </head>
 <body>
@@ -71,7 +105,7 @@
         <section class="sec sec02 coffee-story">
             <div class="container"></div>
         </section>
-        <section class="sec sec03 brand-banner">
+        <section class="sec sec03 brand-story">
             <div class="container"></div>
         </section>
         <section class="sec sec04 fresh-coffee">
@@ -94,7 +128,7 @@
         </section>
         <footer class="footer">
             <div class="container"></div>
-        </section>
+        </footer>
     </section>
     <script src="./js/jquery.min.js"></script>
 </body>
