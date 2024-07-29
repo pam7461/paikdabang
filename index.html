@@ -349,6 +349,9 @@
             background:var(--sub-color01);
         }
         /* .dessert */
+        .dessert{
+            margin-bottom:20px;
+        }
         .dessert::before{
             background-image:url(./images/img-sec06.jpg);
         }
@@ -361,10 +364,7 @@
         .dessert p{
             top:170px;
         }
-        /* .fran-store */
-        .fran-store{
-            padding:20px 0;
-        }
+        /* .fran-store */        
         .fran-store .container{
             display:grid;
             grid-template-columns:1fr 1fr;
@@ -412,6 +412,29 @@
         .fran-store .link:hover a{
             opacity:1;
         }
+        .store form{
+            position:relative;
+        }
+        .store input[type="text"]{
+            display:block;
+            width:100%;
+            border:2px solid var(--sub-color04);
+            padding:1em;
+        }
+        .store input[type="submit"]{
+            position:absolute;
+            right:1em;
+            top:50%;
+            transform:translate(0,-50%);
+            cursor:pointer;
+            width:24px;
+            height:24px;
+            border:none;
+            background:url(./images/ico-search.png) no-repeat center;
+            background-size:contain;
+            text-indent:-999999px;
+        }
+
 
         
         /* .sns */
@@ -450,9 +473,12 @@
             }
             .sweet-ccino{
                 grid-area:5/8/6/-1;
+                margin-bottom:20px;
             }
             .dessert{
+                height:500px;
                 grid-area:6/6/7/-1;
+                margin-bottom:0;
             }
             .fran-store{
                 grid-area:6/1/7/6;
@@ -540,6 +566,17 @@
             }
             .sweet-ccino,.dessert{
                 padding-left:30px;
+            }
+            .dessert{
+               height:620px; 
+               max-height:620px;
+            }
+            .fran-store{
+                display:grid;
+                justify-content:end;
+            }
+            .fran-store .container{
+                width:480px;
             }
             .fran-store .art{
                 height:300px;
