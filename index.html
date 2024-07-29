@@ -269,10 +269,66 @@
             color:var(--gray-color15);
         }
 
+        /* fresh-coffee/various-coffee/sweet-ccino/dessert => story01 */
+        .story01{
+            height:52vw;  
+            padding:52px 0 20px;          
+            position:relative;
+            overflow:hidden;
+        }
+        .story01::before{
+            content:'';
+            display:block;
+            position:absolute;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+            z-index:1;
+            background:url(./images/img-sec03.jpg) no-repeat center;
+            background-size:cover;
+            transition:0.3s;
+        }
+        .story01:hover::before{
+            transform:scale(1.1);
+        }
+        .story01 .container{
+            height:100%;
+            position:relative;
+            z-index:2;
+            display:grid;
+            grid-template-columns:1fr;
+            align-content:space-between;
+        }
+        .story01 h2{
+            font-weight:900;
+            font-size:24px;
+            color:var(--sub-color02);
+            position:relative;
+        }
+        .story01 h2::after{
+            content:'';
+            display:block;
+            width:35px;
+            height:2px;
+            background:var(--sub-color02);
+            position:absolute;
+            left:0;
+            bottom:-0.5em;
+        }
+        .story01 p{
+            display:none; 
+            position:absolute;
+            left:20px;
+            top:130px;           
+        }
         /* .fresh-coffee */        
         /* .various-coffee */
         /* .sweet-ccino */
         /* .dessert */
+
+
+
         /* .fran-store */
         /* .sns */
         /* .footer */
@@ -282,6 +338,9 @@
 
 
         @media (min-width:760px){
+            .story01 h2{
+                font-size:30px;
+            }
         }
 
 
@@ -292,6 +351,9 @@
             }
             .brand-story{
                 grid-area:3/7/4/-1;
+            }
+            .story01{
+                height:32vw;
             }
             .various-coffee{
                 grid-area:5/1/6/8;
@@ -360,6 +422,16 @@
             }
             .brand-story{
                 padding-left:80px;
+            }
+            .story01{
+                height:25vw;
+                max-height:500px;
+            }
+            .story01 h2{
+                font-size:42px;
+            }
+            .story01 p{
+                display:block;
             }
         }
     </style>
