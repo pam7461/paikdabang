@@ -507,7 +507,35 @@
         }
         .footer .link-family{
             display:none;
-            
+            position:absolute;
+            right:20px;
+            top:0;
+        }
+        .footer .link-family .btn-family{
+            width:175px;            
+            border:1px solid var(--gray-color02);
+            padding:0.5em 1em;
+            font-weight:400;
+            font-size:0.7em;
+            cursor:pointer;
+        }
+        .footer .link-family ul{
+            display:none;
+            border:1px solid var(--gray-color02);
+            padding:0.5em 1em;
+            background:var(--gray-color15);
+            font-weight:400;
+            font-size:0.7em;
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:32px;
+        }
+        .footer .link-family ul li{
+            margin-bottom:1em;
+        }
+        .footer .link-family ul li:last-child{
+            margin-bottom:0;
         }
         .footer address{
             display:flex;
@@ -605,8 +633,6 @@
             }
             
         }
-
-
 
 
         @media (min-width:1200px){     
@@ -906,8 +932,8 @@
                     <a href="#"><img src="./images/logo-theborn.png" alt="더본코리아 바로가기"></a>
                 </article>
                 <article class="link-family">
-                    <h2 class="btn-family">패밀리사이트 바로가기</h2>
-                    <ul>
+                    <h2 id="btn-family" class="btn-family">패밀리사이트 바로가기</h2>
+                    <ul id="family-list">
                         <li><a href="#">더본코리아</a></li>
                         <li><a href="#">창업센터</a></li>
                         <li><a href="#">새마을식당</a></li>
@@ -944,6 +970,9 @@
     <script>
         $('.btn-nav').click(function(){
             $('.nav').slideToggle();
+        })
+        $('#btn-family').click(function(){
+            $('#family-list').slideToggle();
         })
        
     </script>
