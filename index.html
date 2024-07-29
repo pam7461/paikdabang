@@ -361,9 +361,39 @@
         .dessert p{
             top:170px;
         }
-
-
         /* .fran-store */
+        .fran-store{
+            padding:20px 0;
+        }
+        .fran-store .container{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
+        }
+        .fran-store h2{
+            display:none;
+        }
+        .fran-store .art{
+            height:240px;
+            border:2px solid var(--sub-color04);
+            padding:20px;
+            display:grid;
+            grid-template-columns:1fr;
+            align-content:space-between;
+        }
+        .fran-store h3{
+            margin-bottom:0.8em;
+            font-weight:700;
+            font-size:20px;
+            color:var(--sub-color04);
+        }
+        .fran-store p{
+            font-weight:400;
+            font-size:0.8em;
+            line-height:1.3;
+        }
+
+        
         /* .sns */
         /* .footer */
 
@@ -374,6 +404,9 @@
         @media (min-width:760px){
             .story01 h2{
                 font-size:30px;
+            }
+            .fran-store h3{
+                font-size:28px;
             }
         }
 
@@ -401,6 +434,13 @@
             .fran-store{
                 grid-area:6/1/7/6;
             }
+            .fran-store .fran{
+                grid-area:2/1/3/-1;
+            }
+            .fran-store .store{
+                grid-area:1/1/2/-1;
+            }
+            
         }
 
 
@@ -477,6 +517,12 @@
             }
             .sweet-ccino,.dessert{
                 padding-left:30px;
+            }
+            .fran-store .art{
+                height:300px;
+            }
+            .fran-store h3{
+                font-size:36px;
             }
 
         }
@@ -636,13 +682,17 @@
             <div class="container">
                 <h2>플랜차이즈와 스토어</h2>
                 <article class="art fran">
-                    <h3>FRANCHISE</h3>
-                    <p>빽다방 창업안내를 도와드리겠습니다.</p>
+                    <div class="art-txt">
+                        <h3>FRANCHISE</h3>
+                        <p>빽다방 창업안내를 도와드리겠습니다.</p>
+                    </div>
                     <div class="link"><a href="#">플랜차이즈 바로가기</a></div>
                 </article>
                 <article class="art store">
-                    <h3>STORE</h3>
-                    <p>원하는 지역의 매장을 검색해보세요!</p>
+                    <div class="art-txt">
+                        <h3>STORE</h3>
+                        <p>원하는 지역의 매장을 검색해보세요!</p>
+                    </div>                    
                     <form action="#" class="search-form">
                         <input type="text" name="search-store" id="search-store">
                         <input type="submit" value="매장찾기">
