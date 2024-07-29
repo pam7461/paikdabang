@@ -324,9 +324,35 @@
         }
         /* .fresh-coffee */        
         /* .various-coffee */
+        .various-coffee::before{
+            background-image:url(./images/img-sec04.jpg);
+        }
+        .various-coffee h2{
+            color:var(--sub-color04);
+        }
+        .various-coffee h2::after{
+            background:var(--sub-color04);
+        }
         /* .sweet-ccino */
+        .sweet-ccino::before{
+            background-image:url(./images/img-sec05.jpg);
+        }
+        .sweet-ccino h2{
+            color:var(--sub-color01);
+        }
+        .sweet-ccino h2::after{
+            background:var(--sub-color01);
+        }
         /* .dessert */
-
+        .dessert::before{
+            background-image:url(./images/img-sec06.jpg);
+        }
+        .dessert h2{
+            color:var(--gray-color15);
+        }
+        .dessert h2::after{
+            background:var(--gray-color15);
+        }
 
 
         /* .fran-store */
@@ -432,7 +458,15 @@
             }
             .story01 p{
                 display:block;
+            }            
+            .various-coffee{
+                display:grid;
+                justify-content:end;
             }
+            .various-coffee .container{
+                width:600px;
+            }
+
         }
     </style>
 </head>
