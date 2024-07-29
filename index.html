@@ -490,6 +490,44 @@
         .link-sns a:last-child{
             background-image:url(./images/ico-insta.png);
         }
+        /* .aside */
+        .aside{
+            position:relative;
+            z-index:10000;
+        }
+        .aside .art01{
+            position:fixed;
+            right:14px;
+            top:100px;            
+        }
+        .aside .art01 a{
+            display:block;
+            width:65px;
+            height:65px;
+            margin-bottom:10px;
+            background:url(./images/img-presentation.png) no-repeat center;
+            background-size:contain;
+            text-indent:-99999px;
+        }
+        .aside .art01 li:nth-child(2) a{
+            background-image:url(./images/img-counsel.png);
+        }
+        .aside .art02{
+            position:fixed;
+            right:14px;
+            bottom:14px;
+        }
+        .aside .art02 a{
+            display:block;
+            width:30px;
+            height:30px;
+            background:url(./images/ico-top.png) no-repeat center;
+            background-size:cover;
+            text-indent:-99999px;
+        }
+        .aside .art02 a:hover{
+            background-image:url(./images/ico-top-over.png);
+        }
         /* .footer */
         .footer{
             padding:36px 0;
@@ -583,6 +621,15 @@
             .fran-store h3{
                 font-size:28px;
             }
+            .aside .art01,.aside .art02{
+                right:30px;
+            }
+            .aside .art01 a{
+                width:120px;
+                height:120px;
+                margin-bottom:14px;
+            }
+            
         }
 
         @media (min-width:800px){
@@ -630,6 +677,18 @@
             }
             .fran-store .store{
                 grid-area:1/1/2/-1;
+            }
+            .aside .art01,.aside .art02{
+                right:41px;
+            }
+            .aside .art01 a{
+                width:140px;
+                height:140px;
+                margin-bottom:20px;
+            }
+            .aside .art02 a{
+                width:60px;
+                height:60px;
             }
             
         }
@@ -728,7 +787,13 @@
             .fran-store h3{
                 font-size:36px;
             }
-
+            .aside .art01{
+                right:60px;
+                top:200px;
+            }
+            .aside .art02{
+                right:60px;
+            }
         }
     </style>
 </head>
