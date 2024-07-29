@@ -67,6 +67,29 @@
         .container{
             padding:0 10px;
         }
+        .link{
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            background:var(--gray-color15);
+            position:relative;
+        }
+        .link::before,.link::after{
+            content:'';
+            display:block;
+            width:24px;
+            height:2px;
+            border-radius:1px;
+            background:var(--gray-color00);
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+        }
+        .link::after{
+            transform:translate(-50%,-50%) rotate(90deg);
+        }
+
 
         /* .header */
         .header{
@@ -195,8 +218,30 @@
             z-index:100;
             opacity:1;
         }
-        /* .coffee-story */
+        /* .coffee-story /.brand-story => story*/
+        .story{
+            height:240px;
+            padding:38px 0 15px;
+            background:url(./images/img-sec01.jpg) no-repeat;
+            background-position-x:55%;
+            background-size:cover;
+            color:var(--sub-color04);
+        }
+        .story h2{
+            margin-bottom:1em;
+            font-weight:900;
+            font-size:42px;
+        }
+        .story p{
+            display:none;
+        }
         /* .brand-story */
+        .brand-story{
+            background:var(--sub-color03) url(./images/img-sec02.jpg) no-repeat 90% 80%;
+            background-size:50%;
+            color:var(--gray-color15);
+        }
+        
         /* .fresh-coffee */
         /* .various-coffee */
         /* .sweet-ccino */
@@ -269,6 +314,12 @@
             .q-nav{
                 display:grid;
                 grid-area:1/2/2/-1;
+            }
+            .story{
+                height:320px;
+            }
+            .story p{
+                display:block;
             }
         }
     </style>
@@ -381,14 +432,14 @@
                 </div>
             </div>
         </section>
-        <section class="sec sec02 coffee-story">
+        <section class="sec sec02 coffee-story story">
             <div class="container">
                 <h2>PAIK’S COFFEE<br>STORY</h2>
                 <p>균형잡힌 바디감으로 긴 여운을 남기는 빽다방 커피를 만나보세요.</p>
                 <div class="link"><a href="#">커피스토리 바로가기</a></div>
             </div>
         </section>
-        <section class="sec sec03 brand-story">
+        <section class="sec sec03 brand-story story">
             <div class="container">
                 <h2>PAIK’S BRAND<br>STORY</h2>
                 <p>합리적인 가격으로 만나는 맛있고 든든한 빽다방</p>
