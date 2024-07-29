@@ -1,0 +1,457 @@
+@charset 'utf-8';
+/* .main-banner */
+.main-banner{
+    padding-top:70px;
+    z-index:90;
+}
+.main-banner .container{
+    padding:0;
+}
+.main-banner h2{
+    display:none;
+}
+.slider{
+    display:grid;
+}
+.slider div{
+    grid-area:1/1/2/-1;
+    z-index:1;
+    opacity:0;
+    transition:opacity 0.3s;
+}
+.slider div.active{
+    z-index:100;
+    opacity:1;
+}
+/* .coffee-story /.brand-story => story*/
+.story{
+    height:240px;
+    padding:38px 0 15px;
+    background:url(../images/img-sec01.jpg) no-repeat;
+    background-position-x:55%;
+    background-size:cover;
+    color:var(--sub-color04);
+}
+.story .container{            
+    height:100%;
+    display:grid;
+    grid-template-columns:1fr;
+    align-content:space-between;
+}
+.story h2{
+    font-weight:900;
+    font-size:42px;
+}
+.story p{
+    display:none;
+    padding-bottom:50px;
+}
+/* .brand-story */
+.brand-story{
+    background:var(--sub-color03) url(../images/img-sec02.jpg) no-repeat 90% 80%;
+    background-size:50%;
+    color:var(--gray-color15);
+}
+
+/* fresh-coffee/various-coffee/sweet-ccino/dessert => story01 */
+.story01{
+    height:52vw;  
+    padding:52px 0 20px;          
+    position:relative;
+    overflow:hidden;
+}
+.story01::before{
+    content:'';
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:1;
+    background:url(../images/img-sec03.jpg) no-repeat center;
+    background-size:cover;
+    transition:0.3s;
+}
+.story01:hover::before{
+    transform:scale(1.1);
+}
+.story01 .container{
+    height:100%;
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1fr;
+    align-content:space-between;
+}
+.story01 h2{
+    font-weight:900;
+    font-size:24px;
+    color:var(--sub-color02);
+    position:relative;
+}
+.story01 h2::after{
+    content:'';
+    display:block;
+    width:35px;
+    height:2px;
+    background:var(--sub-color02);
+    position:absolute;
+    left:0;
+    bottom:-0.5em;
+}
+.story01 p{
+    display:none; 
+    position:absolute;
+    left:20px;
+    top:130px;
+    line-height:1.3;           
+}
+/* .fresh-coffee */        
+.fresh-coffee .container{
+    max-width:1200px;
+    margin:0 auto;
+}         
+/* .various-coffee */
+.various-coffee::before{
+    background-image:url(../images/img-sec04.jpg);
+}
+.various-coffee h2{
+    color:var(--sub-color04);
+}
+.various-coffee h2::after{
+    background:var(--sub-color04);
+}
+/* .sweet-ccino */
+.sweet-ccino::before{
+    background-image:url(../images/img-sec05.jpg);
+}
+.sweet-ccino h2{
+    color:var(--sub-color01);
+}
+.sweet-ccino h2::after{
+    background:var(--sub-color01);
+}
+/* .dessert */
+.dessert{
+    margin-bottom:20px;
+}
+.dessert::before{
+    background-image:url(../images/img-sec06.jpg);
+}
+.dessert h2{
+    color:var(--gray-color15);
+}
+.dessert h2::after{
+    background:var(--gray-color15);
+}
+.dessert p{
+    top:170px;
+}
+/* .fran-store */        
+.fran-store .container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+.fran-store h2{
+    display:none;
+}
+.fran-store .art{
+    height:240px;
+    border:2px solid var(--sub-color04);
+    padding:20px;
+    display:grid;
+    grid-template-columns:1fr;
+    align-content:space-between;
+}
+.fran-store h3{
+    margin-bottom:0.8em;
+    font-weight:700;
+    font-size:20px;
+    color:var(--sub-color04);
+}
+.fran-store p{
+    font-weight:400;
+    font-size:0.8em;
+    line-height:1.3;
+}
+.fran-store .link{
+    background:url(../images/ico-home.png) no-repeat center;
+    background-size:60%;
+    box-shadow:0px 0px 10px var(--gray-color12);
+    justify-self:start;
+}
+.fran-store .link::before,
+.fran-store .link::after{
+    display:none;
+}
+.fran-store .link:hover{
+    transform:rotate(0);
+}
+.fran-store .link a{
+    transform:scale(1);
+    opacity:0;
+}
+.fran-store .link:hover a{
+    opacity:1;
+}
+.fran-store .fran{
+    background:url(../images/img-paik.png) no-repeat right bottom;
+    background-size:150px;
+}
+.store form{
+    position:relative;
+}
+.store input[type="text"]{
+    display:block;
+    width:100%;
+    border:2px solid var(--sub-color04);
+    padding:1em;
+}
+.store input[type="submit"]{
+    position:absolute;
+    right:1em;
+    top:50%;
+    transform:translate(0,-50%);
+    cursor:pointer;
+    width:24px;
+    height:24px;
+    border:none;
+    background:url(../images/ico-search.png) no-repeat center;
+    background-size:contain;
+    text-indent:-999999px;
+}        
+/* .sns */
+.sns{
+    border-bottom:3px solid var(--primary-color);
+    padding:76px 0;
+    text-align:center;            
+}
+.sns .container{
+    height:156px;
+    display:grid;
+    align-content:space-between;
+}
+.sns-txt{
+    position:relative;
+}
+.sns-txt::after{
+    content:'';
+    display:block;
+    width:50px;
+    height:1px;
+    background:var(--sub-color04);
+    position:absolute;
+    left:50%;
+    bottom:-30px;
+    transform:translate(-50%,0);
+}
+.sns h2{
+    margin-bottom:0.6em;
+    font-family:'NanumMyeongjo';
+    font-weight:700;
+    font-size:1.3em;
+    letter-spacing:0.2em;
+}
+.sns p{
+    font-weight:400;
+    font-size:0.9em;
+    color:var(--gray-color08);
+}
+.link-sns{
+    display:grid;
+    grid-template-columns:35px 35px;
+    grid-template-rows:35px;
+    gap:14px;
+    justify-content:center;
+}
+.link-sns a{
+    text-indent:-99999px;
+    background:url(../images/ico-face.png) no-repeat center;
+    background-size:contain;
+}
+.link-sns a:last-child{
+    background-image:url(../images/ico-insta.png);
+}
+/* .aside */
+.aside{
+    position:relative;
+    z-index:10000;
+}
+.aside .art01{
+    position:fixed;
+    right:14px;
+    top:100px;            
+}
+.aside .art01 a{
+    display:block;
+    width:65px;
+    height:65px;
+    margin-bottom:10px;
+    background:url(../images/img-presentation.png) no-repeat center;
+    background-size:contain;
+    text-indent:-99999px;
+}
+.aside .art01 li:nth-child(2) a{
+    background-image:url(../images/img-counsel.png);
+}
+.aside .art02{
+    position:fixed;
+    right:14px;
+    bottom:14px;
+}
+.aside .art02 a{
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(../images/ico-top.png) no-repeat center;
+    background-size:cover;
+    text-indent:-99999px;
+}
+.aside .art02 a:hover{
+    background-image:url(../images/ico-top-over.png);
+}
+
+
+@media (min-width:760px){
+    .story01 h2{
+        font-size:30px;
+    }
+    .fran-store .art{
+        padding:32px;
+    }
+    .fran-store h3{
+        font-size:28px;
+    }
+    .aside .art01,.aside .art02{
+        right:30px;
+    }
+    .aside .art01 a{
+        width:120px;
+        height:120px;
+        margin-bottom:14px;
+    }            
+}
+
+
+
+
+@media (min-width:1020px){
+    .coffee-story{
+        grid-area:3/1/4/7;
+    }
+    .brand-story{
+        grid-area:3/7/4/-1;
+    }
+    .story01{
+        height:32vw;
+    }
+    .various-coffee{
+        grid-area:5/1/6/8;
+    }
+    .sweet-ccino{
+        grid-area:5/8/6/-1;
+        margin-bottom:20px;
+    }
+    .dessert{
+        height:500px;
+        grid-area:6/6/7/-1;
+        margin-bottom:0;
+    }
+    .fran-store{
+        grid-area:6/1/7/6;
+    }
+    .fran-store .fran{
+        grid-area:2/1/3/-1;                
+    }
+    .fran-store .store{
+        grid-area:1/1/2/-1;
+    }
+    .aside .art01,.aside .art02{
+        right:41px;
+    }
+    .aside .art01 a{
+        width:140px;
+        height:140px;
+        margin-bottom:20px;
+    }
+    .aside .art02 a{
+        width:60px;
+        height:60px;
+    }            
+}
+
+
+@media (min-width:1200px){     
+    
+
+    .main-banner{
+        padding-top:125.3px;
+    }
+    .story{
+        height:320px;                
+    }            
+    .story .container{
+        width:600px;
+    }
+    .story p{
+        display:block;
+    }
+    .coffee-story{
+        display:grid;
+        justify-content:end;
+    }
+    .brand-story{
+        padding-left:80px;
+    }
+    .story01{
+        height:25vw;
+        max-height:500px;
+    }
+    .story01 h2{
+        font-size:42px;
+    }
+    .story01 p{
+        display:block;
+    } 
+    
+    .various-coffee{
+        display:grid;
+        justify-content:end;
+    }
+    .various-coffee .container{
+        width:730px;
+    }
+    .sweet-ccino,.dessert{
+        padding-left:30px;
+    }
+    .dessert{
+       height:620px; 
+       max-height:620px;
+    }
+    .fran-store{
+        display:grid;
+        justify-content:end;
+    }
+    .fran-store .container{
+        width:480px;
+    }
+    .fran-store .art{
+        height:300px;
+        padding:40px;
+    }
+    .fran-store .fran{
+        background-size:230px;
+    }
+    .fran-store h3{
+        font-size:36px;
+    }
+    .aside .art01{
+        right:60px;
+        top:200px;
+    }
+    .aside .art02{
+        right:60px;
+    }
+}
