@@ -440,6 +440,7 @@
         }        
         /* .sns */
         .sns{
+            border-bottom:3px solid var(--primary-color);
             padding:76px 0;
             text-align:center;            
         }
@@ -490,10 +491,58 @@
             background-image:url(./images/ico-insta.png);
         }
         /* .footer */
-
-
-
-
+        .footer{
+            padding:36px 0;
+        }
+        .footer .container{
+            max-width:1200px;
+            margin:0 auto;
+            position:relative;
+            display:grid;            
+            gap:30px;
+        }
+        .footer .footer-logo{
+            width:180px;
+            justify-self:center;
+        }
+        .footer .link-family{
+            display:none;
+        }
+        .footer address{
+            display:flex;
+            flex-flow:row wrap;
+            justify-content:center;
+            max-width:620px;
+            margin:0 auto;
+        }
+        .footer address span{
+            width:100%;
+            margin-bottom:6px;
+            font-size:0.9em;
+            text-align:center;
+            position:relative;
+        }    
+        .footer address span::after{
+            content:'';
+            display:none;
+            width:1px;
+            height:10px;
+            background:var(--gray-color11);
+            position:absolute;
+            right:-1px;
+            top:1px;
+        }
+        .footer address span:nth-child(3)::after,
+        .footer address span:nth-child(5)::after,
+        .footer address span:last-child::after{
+            display:none;
+        }
+        .footer .copyright{
+            font-weight:400;
+            font-size:0.8em;
+            color:var(--gray-color09);
+            text-align:center;
+        }
 
         @media (min-width:760px){
             .story01 h2{
@@ -507,6 +556,19 @@
             }
         }
 
+        @media (min-width:800px){
+            .footer .link-family{
+                display:block;
+            }
+            .footer address span{
+                width:auto;
+                padding:0 1em;
+                font-size:0.8em;
+            }
+            .footer address span::after{
+                display:block;
+            }
+        }
 
 
         @media (min-width:1020px){
