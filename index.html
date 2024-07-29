@@ -9,7 +9,32 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- index 스타일 -->
     <link rel="stylesheet" href="./css/index.css">
-    <title>빽다방</title>    
+    <title>빽다방</title>  
+    <style>
+        .main-banner .container{
+            position:relative;
+        }
+        .btn-pager{
+            position:absolute;
+            left:50%;
+            bottom:30px;
+            transform:translate(-50%,0);
+            z-index:10000;
+            display:grid;
+            grid-template-columns:12px 12px 12px 12px;
+            grid-template-rows:12px;
+            gap:12px;
+        }
+        .btn-pager span{
+            border-radius:50%;
+            background:var(--gray-color10);
+            text-indent:-99999px;
+            cursor:pointer;
+        }
+        .btn-pager span.active{
+            background:var(--primary-color);
+        }
+    </style>  
 </head>
 <body>
     <section class="wrap">
@@ -118,7 +143,7 @@
                     </div>
                 </div>
                 <div class="btn-pager">
-                    <span>1</span><span>2</span><span>3</span><span>4</span>
+                    <span class="active">1</span><span>2</span><span>3</span><span>4</span>
                 </div>
             </div>
         </section>
