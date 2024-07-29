@@ -65,14 +65,19 @@
             grid-column:1/-1;
         }
         .container{
-            padding:0 10px;
+            padding:0 20px;
         }
         .link{
             width:50px;
             height:50px;
             border-radius:50%;
             background:var(--gray-color15);
-            position:relative;
+            position:relative;            
+            justify-self:end;
+            transition:0.3s;
+        }
+        .link:hover{
+            transform:rotate(360deg);
         }
         .link::before,.link::after{
             content:'';
@@ -84,10 +89,26 @@
             position:absolute;
             left:50%;
             top:50%;
+            z-index:1;
             transform:translate(-50%,-50%);
         }
         .link::after{
             transform:translate(-50%,-50%) rotate(90deg);
+        }
+        .link a{
+            display:block;
+            width:100%;
+            height:100%;
+            background:url(./images/ico-over.png) no-repeat center;
+            background-size:cover;
+            transform:scale(0);
+            text-indent:-999999px;
+            transition:0.3s;
+            position:relative;
+            z-index:2;
+        }
+        .link:hover a{
+            transform:scale(1);
         }
 
 
@@ -227,13 +248,19 @@
             background-size:cover;
             color:var(--sub-color04);
         }
+        .story .container{            
+            height:100%;
+            display:grid;
+            grid-template-columns:1fr;
+            align-content:space-between;
+        }
         .story h2{
-            margin-bottom:1em;
             font-weight:900;
             font-size:42px;
         }
         .story p{
             display:none;
+            padding-bottom:50px;
         }
         /* .brand-story */
         .brand-story{
@@ -283,7 +310,10 @@
 
 
 
-        @media (min-width:1200px){            
+        @media (min-width:1200px){     
+            .link{
+                justify-self:start;
+            }       
             .logo{
                 grid-area:2/1/3/2;
             }
@@ -316,10 +346,20 @@
                 grid-area:1/2/2/-1;
             }
             .story{
-                height:320px;
+                height:320px;                
+            }            
+            .story .container{
+                width:600px;
             }
             .story p{
                 display:block;
+            }
+            .coffee-story{
+                display:grid;
+                justify-content:end;
+            }
+            .brand-story{
+                padding-left:80px;
             }
         }
     </style>
