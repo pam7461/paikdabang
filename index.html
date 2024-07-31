@@ -276,8 +276,20 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/default.js"></script>
     <script>
+        let arrSlide = document.querySelectorAll('.slider div');
+        let arrPager = document.querySelectorAll('.btn-pager span');
+        let lastIdx = arrSlide.length - 1;
+        let activeIdx = 1;
         setInterval(function(){
-            // 슬라이더가 순환전환되도록 바꾸는 코드
+            for(let idx=0;idx<=lastIdx;idx++){
+                arrSlide[idx].classList.remove('active');
+                arrPager[idx].classList.remove('active');
+            }   
+            if(activeIdx>lastIdx){
+                activeIdx=0;
+            }                     
+            arrSlide[activeIdx].classList.add('active');
+            arrPager[activeIdx++].classList.add('active');
         },5000);
     </script>
 </body>
