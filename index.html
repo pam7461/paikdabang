@@ -143,7 +143,7 @@
                     </div>
                 </div>
                 <div class="btn-pager">
-                    <span class="active">1</span><span>2</span><span>3</span><span>4</span>
+                    <span class="active">0</span><span>1</span><span>2</span><span>3</span>
                 </div>
             </div>
         </section>
@@ -280,7 +280,7 @@
         let arrPager = document.querySelectorAll('.btn-pager span');
         let lastIdx = arrSlide.length - 1;
         let activeIdx = 1;
-        setInterval(function(){
+        let mainSlider = setInterval(function(){
             for(let idx=0;idx<=lastIdx;idx++){
                 arrSlide[idx].classList.remove('active');
                 arrPager[idx].classList.remove('active');
@@ -290,7 +290,22 @@
             }                     
             arrSlide[activeIdx].classList.add('active');
             arrPager[activeIdx++].classList.add('active');
-        },5000);
+        },1000);
+
+        for(let idx=0;idx<=lastIdx;idx++){
+            arrPager[idx].onclick=function(e){
+                clearInterval(mainSlider);
+                for(let idx=0;idx<=lastIdx;idx++){
+                    arrSlide[idx].classList.remove('active');
+                    arrPager[idx].classList.remove('active');
+                }
+                let activeIdx = e.target.innerHTML;                
+                arrSlide[activeIdx].classList.add('active');
+                arrPager[activeIdx].classList.add('active');                
+            }
+        }
+            
+       
     </script>
 </body>
 </html>
